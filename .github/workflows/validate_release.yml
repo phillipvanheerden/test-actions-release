@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: jefflinse/pr-semver-bump@v1
         name: Validate Pull Request Metadata
+        id: validate_release
         with:
           mode: validate
           repo-token: ${{ secrets.GITHUB_TOKEN }}
@@ -17,3 +18,6 @@ jobs:
           minor-label: release/minor
           patch-label: release/patch
           with-v: true
+
+      - name: echo bumped version
+        run: echo ${{ steps.validate_release.outputs.version }}
