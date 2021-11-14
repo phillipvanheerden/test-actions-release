@@ -18,6 +18,8 @@ jobs:
           minor-label: release/minor
           patch-label: release/patch
           with-v: true
+          release-notes-prefix: -- begin release notes --
+          release-notes-suffix: -- end release notes --
 
       - name: echo bumped version
         run: echo ${{ steps.validate_release.outputs.version }}
