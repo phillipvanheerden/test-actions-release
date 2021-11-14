@@ -13,3 +13,7 @@ jobs:
         with:
           mode: validate
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          major-label: release/major
+          minor-label: release/minor
+          patch-label: release/patch
+          with-v: true
