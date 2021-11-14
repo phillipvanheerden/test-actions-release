@@ -15,3 +15,9 @@ jobs:
           mode: bump
           with-v: true
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          major-label: release/major
+          minor-label: release/minor
+          patch-label: release/patch
+          with-v: true
+          release-notes-prefix: -- begin release notes --
+          release-notes-suffix: -- end release notes --
